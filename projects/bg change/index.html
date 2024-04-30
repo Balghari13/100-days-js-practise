@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bg Change</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h1>Change My Background</h1>
+    <button id="bgBtn">Change Bg from specific colors</button>
+
+    <h2>Change again randomly</h2>
+    <button id="bgRandom">Change Bg randomly</button>
+  </body>
+  <script>
+    const bgBtn = document.getElementById("bgBtn");
+    const bgRandom = document.getElementById("bgRandom");
+
+
+     // change bg by specific set of given colors
+    bgBtn.addEventListener("click", () => {
+      const color = ["red", "green", "orange", "yellow", "blue"];
+      //get random index like color[1] etc
+      const changeBg = color[Math.floor(Math.random() * color.length)];
+      document.body.style.backgroundColor = changeBg;
+      console.log(changeBg);
+    });
+
+    //change bg by any randomly generated colors
+    bgRandom.addEventListener("click", () => {
+      const hexaNumber = [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+      ];
+      
+      let hexaCode = ''
+      for(let i=0; i<6; i++){
+        //get random index
+        let randomIndex = Math.floor(Math.random()* hexaNumber.length)
+        //increment hexacode with number on that index
+        hexaCode += hexaNumber[randomIndex]
+      }
+      document.body.style.backgroundColor = `#${hexaCode}`
+        console.log(`#${hexaCode}`);
+
+         
+    });
+  </script>
+</html>
