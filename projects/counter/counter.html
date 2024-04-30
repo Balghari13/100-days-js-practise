@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  <h3>Counter App</h3>
+  <h2 class="counter">0</h2>
+  <button class="inc">Inc</button>
+  <button class="dec">Dec</button>
+  <h3>Counter App Using for Each loop</h3>
+  <h2 class="counters">0</h2>
+  <button class="btn incr">Inc</button>
+  <button class="btn decr">Dec</button>
+</body>
+<script>
+
+    const incBtn = document.querySelector('.inc')
+    const decBtn = document.querySelector('.dec')
+    const counter = document.querySelector('.counter')
+    let count = 0
+
+incBtn.addEventListener('click',()=>{
+    count++;
+    counter.innerHTML = count
+    counter.style.color = 'green'
+})
+decBtn.addEventListener('click',()=>{
+  count--;
+  counter.innerHTML = count
+  counter.style.color = 'red'
+})
+
+//by using foreach loop
+
+const buttons = document.querySelectorAll('.btn')
+const counters = document.querySelector('.counters')
+let number = 0
+console.log(counters);
+buttons.forEach((button)=>{
+  button.addEventListener('click', ()=>{
+
+    if(button.classList.contains('incr')){
+      number += 1
+    }else if(button.classList.contains('decr')){
+      number--
+    }
+    counters.innerHTML = number
+     if(number>0){
+      counters.style.color = 'green'
+     }else{
+      counters.style.color = 'red'
+     }
+  })
+})
+
+
+ 
