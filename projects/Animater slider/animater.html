@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animater Slider</title>
+</head>
+<style>
+  *{
+    box-sizing: border-box;
+  }
+   body{
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .container{
+    display: flex;
+    width: 90vw;
+   }
+   .panel{
+    height: 80vh;
+    width: 70vw;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+    flex: 0.5;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.7s;
+   }
+   .active {
+    flex: 5;
+   }
+
+  @media screen and (max-width:480px){
+    .container{
+      width: 100vw;
+    }
+    .panel:nth-child(6){
+      display: none;
+    }
+    .panel:nth-child(5){
+      display: none;
+    }
+    .panel:nth-child(4){
+      display: none;
+    }
+  }
+
+</style>
+<body>
+
+  <div class="container">
+    <div class="panel active" style="background-image: url(https://images.pexels.com/photos/22192229/pexels-photo-22192229/free-photo-of-the-plaza-de-espana-in-seville-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);"></div>
+    <div class="panel" style="background-image: url(https://images.pexels.com/photos/22192229/pexels-photo-22192229/free-photo-of-the-plaza-de-espana-in-seville-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);"></div>
+    <div class="panel" style="background-image: url(https://images.pexels.com/photos/22192229/pexels-photo-22192229/free-photo-of-the-plaza-de-espana-in-seville-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);"></div>
+    <div class="panel" style="background-image: url(https://images.pexels.com/photos/22192229/pexels-photo-22192229/free-photo-of-the-plaza-de-espana-in-seville-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);"></div>
+    <div class="panel" style="background-image: url(https://images.pexels.com/photos/22192229/pexels-photo-22192229/free-photo-of-the-plaza-de-espana-in-seville-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);"></div>
+    <div class="panel" style="background-image: url(https://images.pexels.com/photos/22192229/pexels-photo-22192229/free-photo-of-the-plaza-de-espana-in-seville-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);"></div>
+    <div class="panel" style="background-image: url(https://images.pexels.com/photos/22192229/pexels-photo-22192229/free-photo-of-the-plaza-de-espana-in-seville-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);"></div>
+  </div>
+
+  
+</body>
+
+<script>
+
+const panels = document.querySelectorAll('.panel')
+
+panels.forEach(panel=>{
+  panel.addEventListener('click', ()=>{
+    removeActive()
+    panel.classList.add('active')
+  })
+})
+
+function removeActive(){
+  panels.forEach(panel=>{
+    panel.classList.remove('active')
+  })
+}
+
+
+// const panels = document.querySelectorAll('.panel');
+// panels.forEach((panel)=>{
+//   panel.addEventListener('click',()=>{
+//   removeActive()
+//  panel.classList.add('active')
+//   console.log('click');
+//   })
+// })
+// function removeActive(){
+//   panels.forEach(panel=>{
+//   panel.classList.remove('active')
+//   })
+// }
+
+</script>
+</html>
