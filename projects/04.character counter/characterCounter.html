@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+  </head>
+  <style>
+    body {
+      background-color: #212121;
+      color: #fff;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 250px;
+      width: 300px;
+      background-color: rgb(73, 75, 74);
+      padding: 10px;
+    }
+    
+  </style>
+  <body>
+    <div class="container">
+      <h3>Live Counter</h3>
+      <textarea name="textarea" id="textarea" onkeyup="count()" cols="30" rows="10"></textarea>
+      <p>Total Characters: <span id="counter">0</span></p>
+
+    </div>
+  </body>
+  <script>
+
+const textarea = document.getElementById('textarea');
+const counter = document.getElementById('counter')
+
+function count(){
+  const length = textarea.value.length;
+  counter.innerText = length
+
+}
+
+ </script>
+</html>
