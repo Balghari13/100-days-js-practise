@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Write your message</h3>
+  <form id="form">
+    <input type="text" id="text">
+    <button type="submit" id="submit">Submit</button>
+  </form>
+  <p id="message"></p>
+</body>
+
+<script>
+  const text = document.getElementById('text')
+  console.log(text);
+  const btn = document.getElementById('submit')
+  const message = document.getElementById('message')
+  const form = document.getElementById('form')
+
+  form.addEventListener('submit', (e)=>{
+     e.preventDefault()
+     message.innerText = text.value;
+     text.value = '';
+  })
+
+</script>
+</html>
