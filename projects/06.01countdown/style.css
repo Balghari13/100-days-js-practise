@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("https://images.pexels.com/photos/93400/pexels-photo-93400.jpeg?auto=compress&cs=tinysrgb&w=400");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue;
+}
+.overlay{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+h1{
+  text-align: center;
+ padding-top: 30px;
+}
+
+.countdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 1rem;
+  text-align: center;
+}
+
+.countdown span{
+  background-color: aliceblue;
+  display:flex;
+ align-items: center;
+ justify-content: center;
+ width: 70px;
+ padding: 8px 10px;
+ /* height: 40px; */
+ margin-bottom: 8px;
+ font-size: 1.5rem;
+ border-radius: 8px;
+ color: black;
+}
+
+
