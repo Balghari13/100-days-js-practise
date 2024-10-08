@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess Number</title>
+  <style>
+    body{
+      text-align: center;
+    }
+    input{
+      width: 260px;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    button{
+      background-color: aqua;
+      border: 1px solid gray;
+      padding: 8px 14px;
+      border-radius: 5px;
+
+    }
+    button:disabled{
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h3>Enter a guess between 0 to 100</h3>
+  <form >
+    <input class="num" type="number" min="0" max="100" placeholder="Enter a number" required>
+    <div>
+    <button class="submit">Submit</button>
+    <button class="newGame" type="button" disabled>New Game</button>
+    </div>
+  </form>
+
+  <p class="result">Your guess is </p>
+  <p class="allGusses">total guess</p>
+  
+  <script src="script.js"></script>
+</body>
+</html>
