@@ -1,0 +1,29 @@
+body{
+ 
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  height: 80vh;
+  background-color: #212121;
+  color: #fff;
+  padding: 10px;
+}
+h1{
+  font-family: cursive;
+}
+
+span{
+  color: brown;
+  /* display: inline-flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+span::after{
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background-color: brown;
+  margin-left: 5px;
+}
