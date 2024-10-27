@@ -1,0 +1,147 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 20px;
+
+}
+
+.container{
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: start; */
+  margin: 0 auto;
+  
+  gap: 12px;
+  text-align: center;
+}
+
+select, input,button{
+  padding: 10px;
+  font-size: 16px;
+}
+
+#range{
+  padding: 0;
+}
+
+.range-container{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+ gap: 4px;
+}
+.range-container input{
+  flex-grow: 1;
+  
+}
+.toast-container{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  top: 10px;
+  left: 10;
+ overflow: hidden;
+}
+.toast{
+  background-color: green;
+  color: #fff;
+  padding: 5px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  animation: fromLeft 0.1s ease-in;
+}
+.toast-container.right .toast{
+  animation: fromRight 0.1s ease-in;
+}
+
+
+.toast.toLeft{
+  animation: toLeft 0.1s ease-in forwards;
+}
+.toast-container.right .toast.toRight{
+  animation: toRight 0.1s ease-in forwards;
+}
+@keyframes fromLeft{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes toLeft {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fromRight{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes toRight {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{  
+    transform: translateX(100%);
+  }
+}
+
+.toast.success::before{
+  content: '✓';
+}
+.toast.warning::before{
+  content: '⚠';
+}
+.toast.error::before{
+  content: '✗';
+}
+.toast.info::before{
+  content: 'ⓘ';
+}
+
+.toast span{
+  cursor: pointer;
+}
+
+.toast.success{
+  background-color: green;
+}
+.toast.warning{
+  background-color: orange;
+}
+.toast.error{
+  background-color: red;
+}
+.toast.info{
+  background-color: rgb(162, 162, 0);
+}
+
+.toast-container.right{
+  right: 10px;
+  left: auto;
+}
+
+.toast-container.bottom{
+  bottom: 10px;
+  top: auto;
+}
+/* .toast.bottom.right{
+  bottom: 10px;
+  top: auto;
+  right: 10px;
+  left: auto;
+} */
