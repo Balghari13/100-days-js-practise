@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #212121;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  background-color: rgb(16, 136, 124);
+  padding: 10px;
+}
+
+.p-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type=number]{
+  width: 50px;
+}
+
+.btn{
+  background-color: #212121;
+  color: #fff;
+  width: 100%;
+}
+.inputBox{
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #212121;
+}
