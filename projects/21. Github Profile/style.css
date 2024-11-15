@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: purple;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.inputUser{
+  background-color: rgb(71, 0, 125);
+  padding: 5px 15px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 290px;
+  font-size: 16px;
+  box-shadow: 0px 0px 2px white;
+ 
+}
+
+.card{
+  padding: 10px;
+  background-color: rgb(71, 0, 125);
+  max-width: 600px;
+  min-height: 200px;
+  padding: 5px 15px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px white;
+  display: flex;
+  align-items: center;
+
+}
+img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  vertical-align: middle;
+  border: 10px solid #2a2a72;
+}
+.user-info{
+  flex-grow: 1;
+  margin-left:40px;
+}
+
+.user-info ul{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  max-width: 400px;
+}
+.user-info ul li{
+  /* display: flex; */
+  margin-right: 10px;
+  /* align-items: center; */
+}
+.user-info ul li strong{
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+.repo{
+  background-color: blue;
+  display: inline-block;
+  padding: 2px 5px;
+  color: #fff;
+  text-decoration: none;
+ margin-left: 4px;
+ margin-top: 5px;
+}
