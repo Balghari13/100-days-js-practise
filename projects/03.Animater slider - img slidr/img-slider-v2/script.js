@@ -7,11 +7,14 @@ let count = 0;
 
 slides.forEach((slide,index)=>{
   slide.style.left = `${index*100}%`
+//slide from top -bottom
+  //slide.style.top = `${index*100}%`
 })
 
 // const slideImg = ()=>{
 //   slides.forEach((slide)=>{
-//     slide.style.transform = `translateX(-${count*100}%)`
+  //top, bottom
+//     slide.style.transform = `translateY(-${count*100}%)`
 //   })
 // }
 
